@@ -1,0 +1,245 @@
+/* 
+#4281A4  - STEEL BLUE 
+#48A9A6  - VERDIGRIS
+#E4DFDA  - GAINSBORO
+#D4B483  - TAN
+#C1666B  - FUZZY WUZZY
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+} /* this code use for correct changing of box width after adding padding, margin, border*/
+
+
+
+body {
+    background: #E4DFDA;
+    font-family: 'Francois One', sans-serif;
+    max-width: 1480px;
+    margin: 0 auto;
+      
+}
+
+/*Header  */
+header {
+    background: rgba(66, 129, 164, 1);
+
+}
+
+nav {
+    background-color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav a{
+    background-color: rgba(243, 187, 102, 0.7);
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    
+}
+
+.logo {
+    width: 250px;
+    float: right;
+} 
+
+.box {
+    padding-top: 70px;
+}
+
+.box-h {
+    padding: 0 10px;
+}
+
+header h2 {
+    color: #C1666B;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.newcolor {
+    line-height: 20px;
+    color: #E4DFDA;
+}
+
+
+
+
+
+/*Footer */
+footer {
+    background: linear-gradient(rgba(212, 180, 131, 0.5), #E4DFDA);
+    color: #4281A4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    padding-bottom: 40px;
+
+   
+}
+
+footer p {
+    font-size: 15px;
+}
+
+.contact {
+    padding-bottom: 20px;
+    line-height: 25px; 
+}
+
+
+
+/*General*/
+
+h2, h3, p {
+    margin: 0;
+    padding: 20px 0 ;
+}
+
+h1 {
+    color: #E4DFDA;
+    margin: 0;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+h2 {
+    color:  #4281A4;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 ~ p {
+    padding: 10px;
+}
+
+h3 {
+    color: #C1666B;
+    font-size: 25px;
+}
+
+p {
+    color:  #48A9A6;
+    font-size: 20px;
+    line-height: 50%;
+}
+
+li {
+    color: #D4B483;
+    font-size: 15px;
+    line-height: 150%;
+
+}
+a {
+    color: #C1666B;
+    padding: 20px;
+    margin: 10px;
+}
+
+a:hover { 
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4281A4;
+}
+
+
+
+/*Main part*/
+main {
+    margin-top: 200px;
+    margin: 0 auto;
+}
+
+.type {
+    
+    grid-area: work;
+    padding: 10px;
+    margin: 20px;
+    border: 2px dashed #C1666B; 
+}
+
+.here {
+    margin: 0;
+    padding: 0;
+}
+
+.pic {
+    grid-area: edu;
+    padding: 10px;
+    margin: 20px;
+    border: 2px dashed #C1666B;
+}
+
+img {
+    width: 100%;
+}
+
+/*.btn {
+    text-align: center;
+    color: #48A9A6;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 0;
+    font-size: 20px;
+    grid-area: file;
+   
+
+
+} /*Download*/ 
+
+
+/*Media Queri*/
+@media (min-width: 760px) {
+    main {
+        display: grid;
+        grid-template-areas: "work edu"
+                             "file file";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav a {
+        margin: 10px 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 759px) {
+    header {
+        text-align: center;
+    }
+    header h2 {
+        text-align: center;
+    }
+    img {
+        float: center;
+       
+    }
+    .logo {
+        float: none;
+    }
+}
+
+@media (max-width: 320px) {
+    nav a {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .contact {
+       
+    }
+}
